@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Components</title>
+</head>
+
+<body>
+    <div id="app">
+        <button type="button">sibling something</button>
+        <my-component> <!-- 치환될 엘리먼트 --> </my-component>
+        <my-local-component> <!-- 치환될 엘리먼트 --> </my-local-component>
+    </div>
+
+    <div id="app2">
+        <my-component> <!-- 치환될 엘리먼트 --> </my-component>
+        <my-local-component> <!-- 치환될 엘리먼트 --> </my-local-component>
+    </div>
+
+    <script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
+    <script>
+        // Global Component
+        Vue.component('my-component', {
+            template: '<div>A global component!</div>'
+        });
+
+        // Local Component
+        var cmp = {
+            template: '<div>A local component!</div>'
+        };
+
+        new Vue({
+            el: '#app',
+            components: {
+                // 태그명 : 컴포넌트의 내용
+                'my-local-component': cmp
+            }
+        })
+
+        new Vue({
+            el: '#app2'
+        })
+
+    </script>
+</body>
+
+</html>
