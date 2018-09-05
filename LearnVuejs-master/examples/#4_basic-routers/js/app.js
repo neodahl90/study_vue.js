@@ -2,8 +2,8 @@
 
 // 1. Define route components.
 // These can be imported from other files
-var Foo = { template: '<div>foo</div>' }
-var Bar = { template: '<div>bar</div>' }
+var Foo = { template: '<div>changed foo</div>' }
+var Bar = { template: '<div>changed bar</div>' }
 
 // 2. Define some routes
 // Each route should map to a component. The "component" can

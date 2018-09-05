@@ -4,6 +4,7 @@ var app = new Vue({
     message : 'Hello Vue.js',
     // 할일 #1
     // 새로운 데이터 속성을 1개 추가하고, data bindings 를 이용하여 화면에 표시해보세요.
+    another_message: '안녕 뷰',
 
     uid: '10',
     // 할일 #2
